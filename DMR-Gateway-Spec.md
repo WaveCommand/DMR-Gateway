@@ -15,71 +15,71 @@
 2. [Vision](#2-vision)
 3. [Problem Statement](#3-problem-statement)
 4. [Design Principles](#4-design-principles)
-5. [Goals](#5-goals)
-6. [Non-Goals](#6-non-goals)
-7. [Core Concepts](#7-core-concepts)
-8. [System Architecture](#8-system-architecture)
-9. [Trust Boundaries](#9-trust-boundaries)
-10. [Event-Driven Architecture](#10-event-driven-architecture)
-11. [Event Model](#11-event-model)
-12. [Device Abstraction](#12-device-abstraction)
-13. [DMR Backend Architecture](#13-dmr-backend-architecture)
-14. [MMDVM Integration](#14-mmdvm-integration)
-15. [Motorola IPSC Integration](#15-motorola-ipsc-integration)
-16. [Hytera Integration](#16-hytera-integration)
-17. [Rules Engine](#17-rules-engine)
-18. [Conditions](#18-conditions)
-19. [Actions](#19-actions)
-20. [Workflows](#20-workflows)
-21. [Task and Job System](#21-task-and-job-system)
-22. [Alert System](#22-alert-system)
-23. [DMR Command System](#23-dmr-command-system)
-24. [Radio Identity and Authorization](#24-radio-identity-and-authorization)
-25. [TTS Architecture](#25-tts-architecture)
-26. [MQTT and Home Assistant](#26-mqtt-and-home-assistant)
-27. [Cellular SMS Gateway](#27-cellular-sms-gateway)
-28. [Hardware Agent](#28-hardware-agent)
-29. [Edge Functions](#29-edge-functions)
-30. [Secrets Management](#30-secrets-management)
-31. [Authentication and Authorization](#31-authentication-and-authorization)
-32. [Security Architecture](#32-security-architecture)
-33. [Audit Logging](#33-audit-logging)
-34. [Observability](#34-observability)
-35. [Event Explorer](#35-event-explorer)
-36. [Simulation and Dry-Run](#36-simulation-and-dry-run)
-37. [Event Replay](#37-event-replay)
-38. [Web Application](#38-web-application)
-39. [CLI](#39-cli)
-40. [Database Model](#40-database-model)
-41. [API Design](#41-api-design)
-42. [WebSocket Design](#42-websocket-design)
-43. [Internal Service Contracts](#43-internal-service-contracts)
-44. [Configuration](#44-configuration)
-45. [Docker Architecture](#45-docker-architecture)
-46. [Networking](#46-networking)
-47. [Persistence](#47-persistence)
-48. [Reliability](#48-reliability)
-49. [Failure Handling](#49-failure-handling)
-50. [Rate Limiting](#50-rate-limiting)
-51. [Validation](#51-validation)
-52. [Testing Strategy](#52-testing-strategy)
-53. [Developer Experience](#53-developer-experience)
-54. [Repository Structure](#54-repository-structure)
-55. [Technology Stack](#55-technology-stack)
-56. [Development Phases](#56-development-phases)
-57. [Milestones](#57-milestones)
-58. [Operational Runbook](#58-operational-runbook)
-59. [Backup and Recovery](#59-backup-and-recovery)
-60. [Upgrade Strategy](#60-upgrade-strategy)
-61. [Performance Targets](#61-performance-targets)
-62. [Future Features](#62-future-features)
-63. [Example Automations](#63-example-automations)
-64. [Example API Requests](#64-example-api-requests)
-65. [Example Event Payloads](#65-example-event-payloads)
-66. [Architectural Decisions](#66-architectural-decisions)
-67. [Open Questions](#67-open-questions)
-68. [Definition of Done](#68-definition-of-done)
-69. [Conclusion](#69-conclusion)
+6. [Goals](#6-goals)
+7. [Non-Goals](#7-non-goals)
+8. [Core Concepts](#8-core-concepts)
+9. [System Architecture](#9-system-architecture)
+10. [Trust Boundaries](#10-trust-boundaries)
+11. [Event-Driven Architecture](#11-event-driven-architecture)
+12. [Event Model](#12-event-model)
+13. [Device Abstraction](#13-device-abstraction)
+14. [DMR Backend Architecture](#14-dmr-backend-architecture)
+15. [MMDVM Integration](#15-mmdvm-integration)
+16. [Motorola IPSC Integration](#16-motorola-ipsc-integration)
+17. [Hytera Integration](#17-hytera-integration)
+18. [Rules Engine](#18-rules-engine)
+19. [Conditions](#19-conditions)
+20. [Actions](#20-actions)
+21. [Workflows](#21-workflows)
+22. [Task and Job System](#22-task-and-job-system)
+23. [Alert System](#23-alert-system)
+24. [DMR Command System](#24-dmr-command-system)
+25. [Radio Identity and Authorization](#25-radio-identity-and-authorization)
+26. [TTS Architecture](#26-tts-architecture)
+27. [MQTT and Home Assistant](#27-mqtt-and-home-assistant)
+28. [Cellular SMS Gateway](#28-cellular-sms-gateway)
+29. [Hardware Agent](#29-hardware-agent)
+30. [Edge Functions](#30-edge-functions)
+31. [Secrets Management](#31-secrets-management)
+32. [Authentication and Authorization](#32-authentication-and-authorization)
+33. [Security Architecture](#33-security-architecture)
+34. [Audit Logging](#34-audit-logging)
+35. [Observability](#35-observability)
+36. [Event Explorer](#36-event-explorer)
+37. [Simulation and Dry-Run](#37-simulation-and-dry-run)
+38. [Event Replay](#38-event-replay)
+39. [Web Application](#39-web-application)
+40. [CLI](#40-cli)
+41. [Database Model](#41-database-model)
+42. [API Design](#42-api-design)
+43. [WebSocket Design](#43-websocket-design)
+44. [Internal Service Contracts](#44-internal-service-contracts)
+45. [Configuration](#45-configuration)
+46. [Docker Architecture](#46-docker-architecture)
+47. [Networking](#47-networking)
+48. [Persistence](#48-persistence)
+49. [Reliability](#49-reliability)
+50. [Failure Handling](#50-failure-handling)
+51. [Rate Limiting](#51-rate-limiting)
+52. [Validation](#52-validation)
+53. [Testing Strategy](#53-testing-strategy)
+54. [Developer Experience](#54-developer-experience)
+55. [Repository Structure](#55-repository-structure)
+56. [Technology Stack](#56-technology-stack)
+57. [Development Phases](#57-development-phases)
+58. [Milestones](#58-milestones)
+59. [Operational Runbook](#59-operational-runbook)
+60. [Backup and Recovery](#60-backup-and-recovery)
+61. [Upgrade Strategy](#61-upgrade-strategy)
+62. [Performance Targets](#62-performance-targets)
+63. [Future Features](#63-future-features)
+64. [Example Automations](#64-example-automations)
+65. [Example API Requests](#65-example-api-requests)
+66. [Example Event Payloads](#66-example-event-payloads)
+67. [Architectural Decisions](#67-architectural-decisions)
+68. [Open Questions](#68-open-questions)
+69. [Definition of Done](#69-definition-of-done)
+70. [Conclusion](#70-conclusion)
 
 ---
 
@@ -399,7 +399,7 @@ Optional components should remain optional.
 
 ---
 
-# 5. Goals
+# 6. Goals
 
 ## Primary Goals
 
@@ -436,7 +436,7 @@ Optional components should remain optional.
 
 ---
 
-# 6. Non-Goals
+# 7. Non-Goals
 
 The project should not initially attempt to become:
 
@@ -452,7 +452,7 @@ Instead, it should integrate with those systems.
 
 ---
 
-# 7. Core Concepts
+# 8. Core Concepts
 
 The platform consists of the following major concepts:
 
@@ -511,9 +511,9 @@ Events
 
 ---
 
-# 8. System Architecture
+# 9. System Architecture
 
-## 8.1 High-Level Architecture
+## 9.1 High-Level Architecture
 
 ```text
                            +-----------------------+
@@ -562,7 +562,7 @@ Events
 
 ---
 
-# 9. Trust Boundaries
+# 10. Trust Boundaries
 
 The architecture deliberately separates components by trust level.
 
@@ -619,11 +619,11 @@ User functions must never receive:
 
 ---
 
-# 10. Event-Driven Architecture
+# 11. Event-Driven Architecture
 
 The event system is the central architecture.
 
-## 10.1 Event Flow
+## 11.1 Event Flow
 
 ```text
 SOURCE
@@ -650,7 +650,7 @@ Event Bus
 
 ---
 
-## 10.2 Event Lifecycle
+## 11.2 Event Lifecycle
 
 1. Source generates event.
 2. Adapter receives event.
@@ -670,7 +670,7 @@ Event Bus
 
 ---
 
-# 11. Event Model
+# 12. Event Model
 
 Every event should have a common envelope.
 
@@ -695,7 +695,7 @@ Every event should have a common envelope.
 }
 ```
 
-## 11.1 Event Fields
+## 12.1 Event Fields
 
 ### id
 
@@ -759,7 +759,7 @@ Optional adapter-specific or contextual information.
 
 ---
 
-# 12. Device Abstraction
+# 13. Device Abstraction
 
 Devices are first-class resources.
 
@@ -794,7 +794,7 @@ http
 
 ---
 
-## 12.1 Device Capabilities
+## 13.1 Device Capabilities
 
 Devices advertise capabilities.
 
@@ -819,7 +819,7 @@ This allows the UI and action engine to determine what a device can actually do.
 
 ---
 
-# 13. DMR Backend Architecture
+# 14. DMR Backend Architecture
 
 All DMR implementations should expose a common adapter interface.
 
@@ -845,7 +845,7 @@ The important requirement is that the core application must not depend on a spec
 
 ---
 
-# 14. MMDVM Integration
+# 15. MMDVM Integration
 
 MMDVM is the primary initial RF backend.
 
@@ -881,7 +881,7 @@ The exact wire protocol and supported operations should be isolated inside the a
 
 ---
 
-# 15. Motorola IPSC Integration
+# 16. Motorola IPSC Integration
 
 Motorola IPSC support should be implemented as a separate adapter or bridge.
 
@@ -904,7 +904,7 @@ The rest of the application must not need to know that an event originated from 
 
 ---
 
-# 16. Hytera Integration
+# 17. Hytera Integration
 
 Hytera support should follow the same pattern.
 
@@ -931,7 +931,7 @@ The bridge should isolate:
 
 ---
 
-# 17. Rules Engine
+# 18. Rules Engine
 
 The rules engine converts events into automation.
 
@@ -986,7 +986,7 @@ security:
 
 ---
 
-# 18. Conditions
+# 19. Conditions
 
 Conditions should be composable.
 
@@ -1037,7 +1037,7 @@ conditions:
 
 ---
 
-# 19. Actions
+# 20. Actions
 
 Actions are executable units.
 
@@ -1081,7 +1081,7 @@ Every action should support:
 
 ---
 
-## 19.1 Action Interface
+## 20.1 Action Interface
 
 Conceptually:
 
@@ -1100,7 +1100,7 @@ type Action interface {
 
 ---
 
-# 20. Workflows
+# 21. Workflows
 
 A workflow combines multiple actions.
 
@@ -1139,7 +1139,7 @@ Workflows should support:
 
 ---
 
-## 20.1 Workflow Example
+## 21.1 Workflow Example
 
 ```text
 Doorbell
@@ -1157,7 +1157,7 @@ Doorbell
 
 ---
 
-# 21. Task and Job System
+# 22. Task and Job System
 
 Asynq should execute asynchronous work.
 
@@ -1195,7 +1195,7 @@ correlation ID
 
 ---
 
-# 22. Alert System
+# 23. Alert System
 
 Alerts are reusable definitions.
 
@@ -1231,7 +1231,7 @@ multichannel
 
 ---
 
-## 22.1 Alert Trigger
+## 23.1 Alert Trigger
 
 Endpoint:
 
@@ -1253,7 +1253,7 @@ The HTTP request should not wait for the entire radio transmission.
 
 ---
 
-# 23. DMR Command System
+# 24. DMR Command System
 
 Command talkgroups are dedicated channels for automation.
 
@@ -1286,7 +1286,7 @@ Action authorization
 
 ---
 
-# 24. Radio Identity and Authorization
+# 25. Radio Identity and Authorization
 
 Radio IDs should be represented as first-class entities.
 
@@ -1318,7 +1318,7 @@ Permissions can then be assigned to groups.
 
 ---
 
-## 24.1 Example
+## 25.1 Example
 
 ```text
 Radio 1234567
@@ -1347,7 +1347,7 @@ gate.open
 
 ---
 
-# 25. TTS Architecture
+# 26. TTS Architecture
 
 ElevenLabs is the initial TTS provider.
 
@@ -1380,7 +1380,7 @@ This prevents duplicate API requests for identical audio.
 
 ---
 
-# 26. MQTT and Home Assistant
+# 27. MQTT and Home Assistant
 
 MQTT is the primary automation integration.
 
@@ -1406,7 +1406,7 @@ dmr/commands/broadcast
 
 ---
 
-## 26.1 Home Assistant
+## 27.1 Home Assistant
 
 Future support should include MQTT Discovery.
 
@@ -1431,7 +1431,7 @@ Maintenance announcement
 
 ---
 
-# 27. Cellular SMS Gateway
+# 28. Cellular SMS Gateway
 
 Cellular SMS is an optional integration.
 
@@ -1484,7 +1484,7 @@ phone number -> rule
 
 ---
 
-# 28. Hardware Agent
+# 29. Hardware Agent
 
 The hardware agent is a privileged service.
 
@@ -1516,7 +1516,7 @@ The backend should communicate with the hardware agent through authenticated loc
 
 ---
 
-# 29. Edge Functions
+# 30. Edge Functions
 
 Edge Functions provide user-defined automation.
 
@@ -1544,7 +1544,7 @@ export default async function handler(event) {
 
 ---
 
-## 29.1 Function Security
+## 30.1 Function Security
 
 Functions must have:
 
@@ -1560,7 +1560,7 @@ Functions must have:
 
 ---
 
-## 29.2 Function Permissions
+## 30.2 Function Permissions
 
 Example:
 
@@ -1583,7 +1583,7 @@ must not be able to invoke GPIO.
 
 ---
 
-# 30. Secrets Management
+# 31. Secrets Management
 
 Sensitive credentials should be represented as secrets.
 
@@ -1608,7 +1608,7 @@ Secrets should:
 
 ---
 
-# 31. Authentication and Authorization
+# 32. Authentication and Authorization
 
 Initial authentication:
 
@@ -1635,7 +1635,7 @@ LDAP
 
 ---
 
-## 31.1 Permissions
+## 32.1 Permissions
 
 Instead of relying exclusively on roles, permissions should be granular.
 
@@ -1675,7 +1675,7 @@ Roles can then be bundles of permissions.
 
 ---
 
-# 32. Security Architecture
+# 33. Security Architecture
 
 Security requirements:
 
@@ -1696,7 +1696,7 @@ Security requirements:
 
 ---
 
-## 32.1 Sensitive Actions
+## 33.1 Sensitive Actions
 
 Actions such as:
 
@@ -1720,7 +1720,7 @@ audit requirement
 
 ---
 
-# 33. Audit Logging
+# 34. Audit Logging
 
 Audit entries should contain:
 
@@ -1744,7 +1744,7 @@ Audit logs should be append-oriented and difficult for ordinary operators to mod
 
 ---
 
-# 34. Observability
+# 35. Observability
 
 The system should expose:
 
@@ -1780,7 +1780,7 @@ function_execution_failures_total
 
 ---
 
-# 35. Event Explorer
+# 36. Event Explorer
 
 The UI should provide a real-time event explorer.
 
@@ -1827,7 +1827,7 @@ correlation ID
 
 ---
 
-# 36. Simulation and Dry-Run
+# 37. Simulation and Dry-Run
 
 The system should include a simulator.
 
@@ -1875,7 +1875,7 @@ No physical action should occur.
 
 ---
 
-# 37. Event Replay
+# 38. Event Replay
 
 Persisted events should be replayable.
 
@@ -1904,7 +1904,7 @@ This allows operators to test changes against historical events.
 
 ---
 
-# 38. Web Application
+# 39. Web Application
 
 Frontend:
 
@@ -1942,7 +1942,7 @@ Settings
 
 ---
 
-## 38.1 Dashboard
+## 39.1 Dashboard
 
 The dashboard should show:
 
@@ -1960,7 +1960,7 @@ Modem Status
 
 ---
 
-## 38.2 Rule Builder
+## 39.2 Rule Builder
 
 Two modes should eventually exist.
 
@@ -1976,7 +1976,7 @@ The system should validate the rule before saving.
 
 ---
 
-# 39. CLI
+# 40. CLI
 
 A CLI should complement the web UI.
 
@@ -2016,7 +2016,7 @@ dmrctl simulate sms ...
 
 ---
 
-# 40. Database Model
+# 41. Database Model
 
 PostgreSQL is the primary database.
 
@@ -2068,7 +2068,7 @@ refresh_tokens
 
 ---
 
-## 40.1 Event Storage
+## 41.1 Event Storage
 
 Events should be append-oriented.
 
@@ -2101,7 +2101,7 @@ subject_id
 
 ---
 
-# 41. API Design
+# 42. API Design
 
 Base path:
 
@@ -2210,7 +2210,7 @@ GET /api/system/metrics
 
 ---
 
-# 42. WebSocket Design
+# 43. WebSocket Design
 
 Endpoint:
 
@@ -2263,7 +2263,7 @@ Example:
 
 ---
 
-# 43. Internal Service Contracts
+# 44. Internal Service Contracts
 
 Services should communicate using explicit contracts.
 
@@ -2288,7 +2288,7 @@ should not query the application database directly.
 
 ---
 
-# 44. Configuration
+# 45. Configuration
 
 Configuration should support environment variables.
 
@@ -2317,7 +2317,7 @@ Sensitive values should eventually migrate to the secrets subsystem.
 
 ---
 
-# 45. Docker Architecture
+# 46. Docker Architecture
 
 Initial mandatory services:
 
@@ -2345,7 +2345,7 @@ The default installation should not require all optional integrations.
 
 ---
 
-# 46. Networking
+# 47. Networking
 
 Use separate Docker networks where useful.
 
@@ -2368,7 +2368,7 @@ The hardware agent should only be reachable by authorized application services.
 
 ---
 
-# 47. Persistence
+# 48. Persistence
 
 Persistent data:
 
@@ -2391,7 +2391,7 @@ or an object-storage abstraction in future versions.
 
 ---
 
-# 48. Reliability
+# 49. Reliability
 
 The system should prefer asynchronous execution.
 
@@ -2417,7 +2417,7 @@ to finish.
 
 ---
 
-## 48.1 Idempotency
+## 49.1 Idempotency
 
 External triggers should support idempotency keys where practical.
 
@@ -2431,7 +2431,7 @@ This prevents duplicate execution when clients retry requests.
 
 ---
 
-# 49. Failure Handling
+# 50. Failure Handling
 
 Actions should return structured results.
 
@@ -2458,7 +2458,7 @@ INTERNAL_ERROR
 
 ---
 
-# 50. Rate Limiting
+# 51. Rate Limiting
 
 Rate limits should exist at multiple levels.
 
@@ -2502,7 +2502,7 @@ maximum 3 executions per minute
 
 ---
 
-# 51. Validation
+# 52. Validation
 
 Validation must happen at boundaries.
 
@@ -2524,7 +2524,7 @@ Never assume external input is valid.
 
 ---
 
-# 52. Testing Strategy
+# 53. Testing Strategy
 
 Testing should occur at several levels.
 
@@ -2582,7 +2582,7 @@ Audit
 
 ---
 
-# 53. Developer Experience
+# 54. Developer Experience
 
 The repository should provide:
 
@@ -2609,7 +2609,7 @@ and run the frontend/backend locally if desired.
 
 ---
 
-# 54. Repository Structure
+# 55. Repository Structure
 
 Recommended structure:
 
@@ -2722,7 +2722,7 @@ dmr-gateway/
 
 ---
 
-# 55. Technology Stack
+# 56. Technology Stack
 
 ## Backend
 
@@ -2771,7 +2771,7 @@ Deno
 
 ---
 
-# 56. Development Phases
+# 57. Development Phases
 
 ## Phase 1 â Core Platform
 
@@ -2959,7 +2959,7 @@ Build:
 
 ---
 
-# 57. Milestones
+# 58. Milestones
 
 ## M1 â Bootable
 
@@ -3007,7 +3007,7 @@ Edge Functions work safely.
 
 ---
 
-# 58. Operational Runbook
+# 59. Operational Runbook
 
 Operators should be able to answer:
 
@@ -3057,7 +3057,7 @@ event
 
 ---
 
-# 59. Backup and Recovery
+# 60. Backup and Recovery
 
 PostgreSQL is the primary source of configuration and historical data.
 
@@ -3085,7 +3085,7 @@ Restore should be tested periodically.
 
 ---
 
-# 60. Upgrade Strategy
+# 61. Upgrade Strategy
 
 Version the application using semantic versioning.
 
@@ -3116,7 +3116,7 @@ frontend version
 
 ---
 
-# 61. Performance Targets
+# 62. Performance Targets
 
 These are initial engineering targets rather than hard guarantees.
 
@@ -3164,7 +3164,7 @@ External RF, TTS, MQTT, camera and cellular latency is outside the core applicat
 
 ---
 
-# 62. Future Features
+# 63. Future Features
 
 Potential future capabilities:
 
@@ -3240,9 +3240,9 @@ A   B
 
 ---
 
-# 63. Example Automations
+# 64. Example Automations
 
-## 63.1 Doorbell
+## 64.1 Doorbell
 
 ```text
 GPIO doorbell
@@ -3262,7 +3262,7 @@ Rule
 
 ---
 
-## 63.2 Front Door
+## 64.2 Front Door
 
 ```text
 DMR SMS
@@ -3292,7 +3292,7 @@ Unlock
 
 ---
 
-## 63.3 Site Alarm
+## 64.3 Site Alarm
 
 ```text
 Alarm input
@@ -3316,7 +3316,7 @@ Workflow
 
 ---
 
-## 63.4 Scheduled Announcement
+## 64.4 Scheduled Announcement
 
 ```text
 08:00
@@ -3336,7 +3336,7 @@ DMR Broadcast
 
 ---
 
-## 63.5 Radio PTT Trigger
+## 64.5 Radio PTT Trigger
 
 ```text
 PTT on TG 9002
@@ -3353,7 +3353,7 @@ Rule
 
 ---
 
-# 64. Example API Requests
+# 65. Example API Requests
 
 ## Trigger Alert
 
@@ -3417,7 +3417,7 @@ Conceptual internal request:
 
 ---
 
-# 65. Example Event Payloads
+# 66. Example Event Payloads
 
 ## DMR SMS
 
@@ -3498,7 +3498,7 @@ Conceptual internal request:
 
 ---
 
-# 66. Architectural Decisions
+# 67. Architectural Decisions
 
 ## ADR-001: Event-Driven Core
 
@@ -3564,7 +3564,7 @@ Conceptual internal request:
 
 ---
 
-# 67. Open Questions
+# 68. Open Questions
 
 The following should remain explicitly unresolved until implementation research/testing confirms the correct approach.
 
@@ -3602,7 +3602,7 @@ The following should remain explicitly unresolved until implementation research/
 
 ---
 
-# 68. Definition of Done
+# 69. Definition of Done
 
 A production-ready release should satisfy the following.
 
@@ -3690,7 +3690,7 @@ A production-ready release should satisfy the following.
 
 ---
 
-# 69. Conclusion
+# 70. Conclusion
 
 DMR Gateway should not be implemented as a collection of independent scripts for DMR, GPIO, MQTT, SMS and HTTP.
 
